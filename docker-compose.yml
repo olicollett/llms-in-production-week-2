@@ -10,6 +10,8 @@ services:
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - GUARDRAILS_TOKEN=${GUARDRAILS_TOKEN}
+      # Set environment variables to be used by the running container
+      - COLLECTOR_ENDPOINT=http://phoenix:6006/v1/traces  # Endpoint for tracing data,       
     # Map port 8080 of the container to port 8080 on the host
     # This allows the Streamlit app to be accessed from the host machine
     ports:
