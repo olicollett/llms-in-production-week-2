@@ -18,7 +18,13 @@ st.set_page_config(page_title="SQL Code Generator")
 st.title("SQL Code Generator")
 
 
-def generate_response(input_text: str, guard: gd.Guard) -> None:
+def generate_response(
+    input_text: str,
+    cache,
+    guard: gd.Guard,
+    distance_threshold: float | None,
+    cache_strategy: str,
+) -> None:
     """
     Generate a response for the given input text, taking in the cache and guard.
     This function checks the cache for similar responses, and if none are found, it queries the LLM.
