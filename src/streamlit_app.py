@@ -49,6 +49,7 @@ def main() -> None:
     guard = get_guard()
     st.warning('Caution - Our models can make mistakes! Always verify the generated SQL', icon="🚨")
 
+    instrument()
     with st.form("my_form"):
         text = st.text_area(
             "Enter text:",
