@@ -4,7 +4,7 @@ import guardrails as gd
 import openai
 import streamlit as st
 
-from src.cached_resources import get_guard
+from src.cached_resources import get_guard, instrument
 from src.constants import OPENAI_MODEL_ARGUMENTS
 from src.models import LLMResponse
 
