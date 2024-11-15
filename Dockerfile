@@ -24,5 +24,7 @@ COPY src ./src
 COPY .streamlit ./.streamlit
 
 EXPOSE 8080
+EXPOSE 6006
+EXPOSE 4317
 
 CMD ["streamlit", "run", "src/streamlit_app.py", "--server.port", "8080"]
